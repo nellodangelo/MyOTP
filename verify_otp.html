@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verifica OTP</title>
+</head>
+<body>
+    <h1>Verifica OTP</h1>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form method="POST" action="/verify">
+        <input type="text" name="username" placeholder="Nome utente" required>
+        <input type="text" name="otp" placeholder="OTP" required>
+        <button type="submit">Verifica</button>
+    </form>
+</body>
+</html>
